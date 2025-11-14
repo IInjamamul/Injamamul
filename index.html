@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="registration-container">
+        <h2>Student Registration Form</h2>
+        <form id="studentRegistrationForm" action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" 
+                       pattern="[A-Za-z\s]+" 
+                       title="Name should not contain special characters or numbers" 
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile No. (10 Digits):</label>
+                <input type="tel" id="mobile" name="mobile" 
+                       pattern="[0-9]{10}" 
+                       maxlength="10" 
+                       title="Mobile number must be 10 digits" 
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Father_name">Father Name:</label>
+                <input type="text" id="Father_name" name="Father_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select id="district" name="district" required>
+                    <option value="">-- Select District --</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="hooghly">Hooghly</option>
+                    <option value="howrah">Howrah</option>
+                    <option value="24pgs">South 24 Parganas</option>
+                    <option value="24pgs">North 24 Parganas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pin">PIN (Starts with 7, 6 Digits):</label>
+                <input type="text" id="pin" name="pin" 
+                       pattern="7[0-9]{5}" 
+                       maxlength="6" 
+                       title="PIN must be 6 digits and start with 7" 
+                       required>
+            </div>
+
+            <button type="submit" class="register-button">Submit</button>
+            
+        </form>
+    </div>
+</body>
+</html>
